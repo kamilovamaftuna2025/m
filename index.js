@@ -6,12 +6,11 @@ const bot = new TelegramBot(token, { polling: true });
 
 
 
-bot.onText('/start', (msg) => {
-    const first_name = msg.chat.first_name;
+bot.on('message', (msg) => {
+    const text = msg.text;
     console.log(msg);
     
-    bot.sendMessage(msg.chat.id, ` Assalomu alaykum ${first_name}!`
-    );
+    bot.sendMessage(msg.chat.id, `--> ${text}` );
     console.log(' Bot ishga tushdi..');
 }); 
 
