@@ -13,5 +13,6 @@ bot.onText('/start', (msg) => {
     bot.sendMessage(msg.chat.id, ` Assalomu alaykum ${first_name}!`
     );
     console.log(' Bot ishga tushdi..');
-});
+}); 
+
 
