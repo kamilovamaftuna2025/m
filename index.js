@@ -8,9 +8,11 @@ const bot = new TelegramBot(token, { polling: true });
 
 bot.on('message', (msg) => {
     const text = msg.text;
+    const id = msg.chat.id
     console.log(msg);
     
-    bot.sendMessage(msg.chat.id, `--> ${text}` );
+    bot.sendMessage(id, `--> ${text}` );
+    bot.sendDice(id)
     console.log(' Bot ishga tushdi..');
 }); 
 
